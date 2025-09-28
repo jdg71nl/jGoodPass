@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <!-- JDG: Note that above lang="en" determines the language and dynamic content. -->
+  <!-- data-bs-theme="auto" ===> https://getbootstrap.com/docs/5.3/customize/color-modes/#javascript -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="jGoodPass" />
+    <!--  -->
+    <meta name="description" content="jGoodPass" />
+    <title>jGoodPass</title>
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> -->
+    <!-- <link rel="icon" href="/favicon.png" type="image/png" /> -->
+    <!--  -->
+    <!-- 
+    # https://en.wikipedia.org/wiki/Canonical_link_element
+    # https://www.seobility.net/en/wiki/Canonical_Tag
+    -->
+    <link rel="canonical" href="https://john.de-graaff.net/app/jgoodpass.html" />
+    <!--  -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    /> -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css?load=02" />
+    <!--  JDG: below inline-styles are moved to this file: -->
+    <!-- <link rel="stylesheet" href="/css/moved-not-inline.css" /> -->
+    <!--      -->
+    <style>
+      .tcell {
+        border: 1px solid orange;
+        padding: 4px;
+      }
+      /*  */
+      .pwd_box {
+        border: 1px solid orange;
+        padding: 12px;
+        margin: 12px;
+        font-family: monospace;
+        font-size: larger;
+        /* background-color: #eee; */
+        display: inline-block;
+      }
+      /*  */
+    </style>
+    <!-- -- -->
+    <!-- Custom styles for this template -->
+    <!-- <link href="/css/navbar-fixed.css" rel="stylesheet" /> -->
+  </head>
+  <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+  <!-- <script src="/js/change-theme.js"></script> -->
+  <!-- <script src="/js/change-language.js"></script> -->
+  <script src="/js/jquery-3.7.1.min.js"></script>
+  <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+  <body>
+    <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+    <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+    <nav class="navbar navbar-expand-md fixed-top theme-navbar-dynamic" _not_class="navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!--  -->
+        <!-- <a class="navbar-brand" href="#">Fixed navbar</a> -->
+        <a class="navbar-brand" href="/">
+          <!-- <img src="/img/SilvrLinux-logo-v1-dark-transparant.png" class="img-logo img-fluid" alt="logo" style="max-width: 320px" /> -->
+          &nbsp;
+        </a>
+        <!--  -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--  -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!--  -->
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" _href="#" data-menu-page-value="home">
+                <en>Homepage</en>
+                <nl>Homepage</nl>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" _href="#" data-menu-page-value="businessplan">
+                <en>Business Plan</en>
+                <nl>Business Plan</nl>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" _href="#" data-menu-page-value="story">
+                <en>Story</en>
+                <nl>Verhaal</nl>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" _href="#" data-menu-page-value="company">
+                <en>Company</en>
+                <nl>Bedrijf</nl>
+              </a>
+            </li> -->
+          </ul>
+          <!--  -->
+          <!--  - - - - - - = = = - - - - - - . -->
+          <div class="btn-group p-2" role="group" aria-label="Change Language">
+            <button type="button" class="btn btn-outline-secondary active" data-language-value="en" aria-pressed="true">EN</button>
+            <button type="button" class="btn btn-outline-secondary" data-language-value="nl" aria-pressed="false">NL</button>
+          </div>
+          <!--  - - - - - - = = = - - - - - - . -->
+          <div class="btn-group p-2" role="group" aria-label="Change Color Theme">
+            <button type="button" class="btn btn-outline-secondary active" data-bs-theme-value="light" aria-pressed="false">Light</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-theme-value="dark" aria-pressed="false">Dark</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-theme-value="auto" aria-pressed="true">Auto</button>
+          </div>
+          <!--  - - - - - - = = = - - - - - - . -->
+        </div>
+        <!--  -->
+      </div>
+    </nav>
+    <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+
+    <main class="container">
+      <div class="_bg-body-tertiary p-1 mt-5 rounded">
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <div data-show-page-value="home">
+          <div class="container bg-body-tertiary p-3 m-3 rounded border border-secondary">
+            <div class="en nl hook_pwd">
+              <!--  -->
+              <!-- <p>jGoodPass-word: <span class="pwd pwd_box"></span></p> -->
+              <!--  -->
+            </div>
+          </div>
+        </div>
+
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <div data-show-page-value="story">
+          <div class="container bg-body-tertiary p-3 m-3 rounded border border-secondary">
+            <div class="en">
+              <h1>Our Story</h1>
+              <p>(coming soon)</p>
+            </div>
+            <div class="nl">
+              <h1>Het Verhaal</h1>
+              <p>(coming soon)</p>
+            </div>
+          </div>
+        </div>
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!-- <div data-show-page-value="company">
+          <div class="container bg-body-tertiary p-3 m-3 rounded border border-secondary">
+            <div class="en">
+              <h1>Our Company</h1>
+              <p>(coming soon)</p>
+            </div>
+            <div class="nl">
+              <h1>Ons Bedrijf</h1>
+              <p>(coming soon)</p>
+            </div>
+          </div>
+        </div> -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+
+        <!-- below Footer from: https://getbootstrap.com/docs/5.3/examples/footers/# -->
+        <div class="container">
+          <footer class="d-flex flex-wrap _justify-content-between align-items-center py-3 my-4 border-top _text-nowrap" style="font-size: smaller">
+            <div class="col-md-6 d-flex align-items-center _red_border text-body-secondary fst-italic text-nowrap">
+              <div class="en">
+                <img src="/img/silvr-favicon-v4.svg" style="max-width: 24pt" class="m-2" />
+                &copy; 2025 jGoodPass &ndash;
+                <a class="no_decoration" href="mailto:john@de-graaff.net">john@de-graaff.net</a>
+              </div>
+              <div class="nl">
+                <img src="/img/silvr-favicon-v4.svg" style="max-width: 24pt" class="m-2" />
+                &copy; 2025 jGoodPass &ndash;
+                <a class="no_decoration" href="mailto:john@de-graaff.net">john@de-graaff.net</a>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center _red_border text-body-secondary fst-italic text-nowrap">
+              <div class="en">
+                This document was last modified:
+                <span class="last_modified"></span>
+              </div>
+              <div class="nl">
+                Dit document is laatst bijgewerkt op:
+                <span class="last_modified"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+
+        <script>
+          (function global_closure() {
+            // start of global_closure
+            // https://stackoverflow.com/questions/7093417/using-jquery-to-replace-one-tag-with-another
+            $("en").contents().unwrap().wrap('<span class="en"/>');
+            $("nl").contents().unwrap().wrap('<span class="nl"/>');
+            $("tso").contents().unwrap().wrap('<span class="tso"/>'); // tso = Text Stand Out
+            $("tim").contents().unwrap().wrap('<span class="tim"/>'); // tim = Text IMportant
+            $("tsilvr").contents().unwrap().wrap('<span class="tsilvr"/>'); // tsilvr = Text Silvr
+            $("tsb").contents().unwrap().wrap('<span class="tsb"/>');
+            $("tsr").contents().unwrap().wrap('<span class="tsr" key-theme-color />');
+            $("tsrl").contents().unwrap().wrap('<span class="tsrl"/>');
+            $("tsrd").contents().unwrap().wrap('<span class="tsrd"/>');
+            $("tsi").contents().unwrap().wrap('<span class="tsi"/>');
+
+            // <a href="http://netwerkkoning.nl" target="_blank" rel="noopener">http://netwerkkoning.nl</a> <br/>
+            $("alink").each(function () {
+              let alink = $(this).html();
+              // let ahref = $(this).getAttribute("href"); // JS-way ?
+              // let ahref = $(this).href; // JS-way ?
+              let ahref = $(this).attr("href"); // JQ-way!
+              if (!ahref) {
+                ahref = alink;
+              }
+              $(this).replaceWith('<a href="' + ahref + '" target="_blank" rel="noopener">' + alink + "</a>");
+            });
+            // <a class="mlink" href="http://netwerkkoning.nl" target="_blank" rel="noopener">http://netwerkkoning.nl</a> <br/>
+            $("mlink").each(function () {
+              let mlink = $(this).html();
+              let mhref = $(this).attr("href"); // JQ-way!
+              if (!mhref) {
+                mhref = mlink;
+              }
+              $(this).replaceWith('<a class="mlink" href="' + mhref + '" target="_blank" rel="noopener">' + mlink + "</a>");
+            });
+            //
+            $("adom").each(function () {
+              var adom = $(this).html();
+              $(this).replaceWith('<a href="http://' + adom + '" target="_new" rel="noopener" >' + adom + "</a>");
+            });
+            //
+            $("linkimg").each(function () {
+              // const alink = $(this).html();
+              const src = $(this).attr("src");
+              const width = $(this).attr("width");
+              const width_str = width ? `style="max-width:${width}"` : "";
+              const local_class = $(this).attr("local_class");
+              const local_class_str = local_class ? `class="img-fluid linkimg ${local_class}"` : "img-fluid linkimg";
+              const label = $(this).attr("label");
+              const label2 = $(this).attr("label2");
+              const label2_str = label2 ? `<br>${label2}` : "";
+              $(this).replaceWith(
+                `<table><tbody><tr class="tcell"><td style="text-align:center">
+    <a href="${src}" target="_blank" rel="noopener">
+    <img src="${src}" ${width_str} ${local_class_str} />
+    </a>
+    </td></tr><tr class="tcell"><td style="text-align:center">
+      <span class="linkimg_label">${label} ${label2_str}</span>
+      </td></tr></tbody></table>`
+              );
+            });
+            //
+          })(); // end of global_closure
+          //
+          // https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified
+          // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+          // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+          let oLastModif = new Date(document.lastModified);
+          $(".last_modified").html(
+            oLastModif.toLocaleString("nl-NL", {
+              // timeZone: "CET",
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+              // second: "2-digit",
+              timeZoneName: "short",
+            })
+          );
+
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          // - - - [ Early definitions ]
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+
+          const setStoredLanguage = (language) => {
+            localStorage.setItem("language", language);
+          };
+
+          const showActiveMenu = (page) => {
+            //
+            const btnToActive = document.querySelector(`[data-menu-page-value="${page}"]`);
+            if (btnToActive) {
+              //
+              document.querySelectorAll("[data-menu-page-value]").forEach((element) => {
+                element.classList.remove("active");
+              });
+              //
+              btnToActive.classList.add("active");
+              //
+            }
+          };
+
+          function handlerMenuChange(page) {
+            // console.log(`# handlerMenuChange() page=${page}`);
+            //
+            const divToShow = document.querySelector(`[data-show-page-value="${page}"]`);
+            if (divToShow) {
+              document.querySelectorAll("[data-show-page-value]").forEach((element) => {
+                element.classList.add("d-none");
+              });
+              //
+              divToShow.classList.remove("d-none");
+            }
+          }
+
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          // - - - [ Menu and URL processing ]
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+
+          const default_lang = "en";
+          // const default_lang = "nl";
+          const default_menu = "home";
+          const valid_lang = ["en", "nl"];
+          // const valid_menu = ["home", "businessplan", "story", "company"];
+          const valid_menu = ["home", "businessplan", "story"];
+
+          function set_URL({ url_lang, url_page }) {
+            //
+            // https://developer.mozilla.org/en-US/docs/Web/API/History_API
+            // https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
+            const state = {};
+            const unused = "";
+            const url = `/${url_lang}/${url_page}`;
+            //
+            // history.pushState(state, unused, url);
+            //
+          }
+
+          // const {url_lang,url_page} = f_process_URL();
+          function f_process_URL() {
+            //
+            // https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname
+            const pathname = window.location?.pathname ?? "/";
+            // console.log(`# f_process_URL() pathname = ${pathname} `);
+            //
+            const matches = pathname.match(/^\/([a-z]*)\/?([a-z]*)/);
+            let url_lang = default_lang;
+            let url_page = default_menu;
+            if (matches) {
+              // console.log(`# f_process_URL() matches=`, matches);
+              url_lang = matches?.[1] || default_lang;
+              url_page = matches?.[2] || default_menu;
+            }
+            if (!valid_lang.includes(url_lang)) {
+              url_lang = default_lang;
+            }
+            if (!valid_menu.includes(url_page)) {
+              url_page = default_menu;
+            }
+            // console.log(`# f_process_URL() pathname=${pathname} url_lang=${url_lang} url_page=${url_page}`);
+            //
+            set_URL({ url_lang, url_page });
+            //
+            setStoredLanguage(url_lang);
+            //
+            showActiveMenu(url_page);
+            handlerMenuChange(url_page);
+            //
+            return {
+              url_lang,
+              url_page,
+            };
+          }
+          //
+          let { url_lang, url_page } = f_process_URL();
+
+          // handlerMenuChange(default_menu);
+
+          window.addEventListener("DOMContentLoaded", () => {
+            //
+            document.querySelectorAll("[data-menu-page-value]").forEach((toggle) => {
+              toggle.addEventListener("click", (event) => {
+                event.preventDefault();
+                const page = toggle.getAttribute("data-menu-page-value");
+                showActiveMenu(page);
+                handlerMenuChange(page);
+                //
+                url_page = page;
+                set_URL({ url_lang, url_page });
+                //
+              });
+            });
+          });
+
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          // - - - [ START: change-theme ]
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          //
+          const getStoredTheme = () => localStorage.getItem("theme");
+          const setStoredTheme = (theme) => localStorage.setItem("theme", theme);
+
+          const getPreferredTheme = () => {
+            const storedTheme = getStoredTheme();
+            if (storedTheme) {
+              return storedTheme;
+            }
+            return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          };
+
+          function handlerColorSchemeChange(mode) {
+            // console.log(`# handlerColorSchemeChange() mode=${mode}`);
+            document.querySelectorAll(".img-logo").forEach((element) => {
+              if (mode === "dark") {
+                element.src = "/img/SilvrLinux-logo-v1-dark-transparant.png";
+              } else {
+                element.src = "/img/SilvrLinux-logo-v1-light-transparant.png";
+              }
+            });
+            document.querySelectorAll(".img-family").forEach((element) => {
+              if (mode === "dark") {
+                element.src = "/img/SilvrServices-Family-v3-dark.png";
+              } else {
+                element.src = "/img/SilvrServices-Family-v3-light.png";
+              }
+            });
+            document.querySelectorAll(".img-demo-case").forEach((element) => {
+              if (mode === "dark") {
+                element.src = "/img/SilvrLinux-Demo-Case-v1-dark-transparant.png";
+              } else {
+                element.src = "/img/SilvrLinux-Demo-Case-v1-light-transparant.png";
+              }
+            });
+            document.querySelectorAll("[key-theme-color]").forEach((element) => {
+              if (mode === "dark") {
+                element.classList.remove("ttl");
+                element.classList.add("ttd");
+              } else {
+                element.classList.remove("ttd");
+                element.classList.add("ttl");
+              }
+            });
+            document.querySelectorAll(".theme-navbar-dynamic").forEach((element) => {
+              if (mode === "dark") {
+                element.classList.remove("navbar-light");
+                element.classList.remove("bg-light");
+                element.classList.add("navbar-dark");
+                element.classList.add("bg-dark");
+              } else {
+                element.classList.remove("navbar-dark");
+                element.classList.remove("bg-dark");
+                element.classList.add("navbar-light");
+                element.classList.add("bg-light");
+              }
+            });
+          }
+
+          const setTheme = (theme) => {
+            // JDG
+            let localTheme = theme;
+            if (theme === "auto") {
+              localTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            // else {
+            //   document.documentElement.setAttribute('data-bs-theme', theme)
+            // }
+            //
+            // this will set the lang-attribute in the HTML-element  ==>  <html data-bs-theme="auto">
+            document.documentElement.setAttribute("data-bs-theme", localTheme);
+            //
+            handlerColorSchemeChange(localTheme);
+            //
+          };
+
+          const showActiveTheme = (theme, focus = false) => {
+            const themeSwitcher = document.querySelector("#bd-theme");
+
+            // if (!themeSwitcher) {
+            //   return;
+            // }
+            //
+            const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`);
+            if (btnToActive) {
+              //
+              // https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+              // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
+              // https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+              document.querySelectorAll("[data-bs-theme-value]").forEach((element) => {
+                element.classList.remove("active");
+                element.setAttribute("aria-pressed", "false");
+              });
+              //
+              btnToActive.classList.add("active");
+              btnToActive.setAttribute("aria-pressed", "true");
+              //
+              // const svgOfActiveBtn = btnToActive
+              //   .querySelector("svg use")
+              //   .getAttribute("href");
+              //
+              const btnToActive_svg_use = btnToActive.querySelector("svg use");
+              let svgOfActiveBtn = undefined;
+              if (btnToActive_svg_use) {
+                svgOfActiveBtn = btnToActive_svg_use.getAttribute("href");
+              }
+              //
+              //
+              const activeThemeIcon = document.querySelector(".theme-icon-active use");
+              if (activeThemeIcon) {
+                activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+              }
+              //
+              const themeSwitcherText = document.querySelector("#bd-theme-text");
+              if (themeSwitcher && themeSwitcherText) {
+                const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
+                themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
+                //
+                if (focus) {
+                  themeSwitcher.focus();
+                }
+              }
+            }
+            //
+          };
+
+          setTheme(getPreferredTheme());
+
+          window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+            const storedTheme = getStoredTheme();
+            if (storedTheme !== "light" && storedTheme !== "dark") {
+              setTheme(getPreferredTheme());
+              showActiveTheme(getPreferredTheme());
+            }
+          });
+
+          window.addEventListener("DOMContentLoaded", () => {
+            showActiveTheme(getPreferredTheme());
+
+            document.querySelectorAll("[data-bs-theme-value]").forEach((toggle) => {
+              toggle.addEventListener("click", () => {
+                const theme = toggle.getAttribute("data-bs-theme-value");
+                setStoredTheme(theme);
+                setTheme(theme);
+                showActiveTheme(theme, true);
+              });
+            });
+          });
+          // - - -
+          //
+          // /END: change-theme
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          //
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          // START: change-language
+          //
+
+          const getStoredLanguage = () => {
+            // https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem
+            return localStorage.getItem("language") || default_lang;
+          };
+
+          const setLanguage = (language) => {
+            //
+            // this will set the lang-attribute in the HTML-element  ==>  <html lang="en">
+            document.documentElement.setAttribute("lang", language);
+            //
+            // console.log(`# setLanguage() language="${language}"`);
+            //
+          };
+
+          const showActiveLanguage = (language) => {
+            //
+            const btnToActive = document.querySelector(`[data-language-value="${language}"]`);
+            if (btnToActive) {
+              //
+              document.querySelectorAll("[data-language-value]").forEach((element) => {
+                element.classList.remove("active");
+                element.setAttribute("aria-pressed", "false");
+              });
+              //
+              btnToActive.classList.add("active");
+              btnToActive.setAttribute("aria-pressed", "true");
+              //
+            }
+            //
+          };
+
+          window.addEventListener("DOMContentLoaded", () => {
+            // https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+            //
+            let activeLanguage = getStoredLanguage();
+            //
+            // console.log(`# on:DOMContentLoaded -- lang = ${lang} `);
+            // if (lang && ["en", "nl"].includes(lang)) {
+            //   if (activeLanguage != lang) {
+            //     activeLanguage = lang;
+            //     setStoredLanguage(activeLanguage);
+            //   }
+            // }
+            //
+            showActiveLanguage(activeLanguage);
+            setLanguage(activeLanguage);
+            //
+            document.querySelectorAll("[data-language-value]").forEach((toggle) => {
+              toggle.addEventListener("click", () => {
+                const language = toggle.getAttribute("data-language-value");
+                setStoredLanguage(language);
+                setLanguage(language);
+                showActiveLanguage(language);
+                //
+                url_lang = language;
+                set_URL({ url_lang, url_page });
+                //
+              });
+            });
+          });
+          //
+          // /END: change-language
+          // - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - .
+          //
+        </script>
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+        <!--  - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . - - - - - - = = = - - - - - - . -->
+      </div>
+    </main>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="./jgoodpass.web.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+        //
+        //
+        // const pwd_str = f_gen_pwd_string({ length: 3 });
+        // console.log(`pwd_str = ${pwd_str}`);
+        // //
+        // // const pwd_el = document.querySelector("#pwd");
+        // document.querySelectorAll(".pwd").forEach((pwd_el) => {
+        //   //
+        //   pwd_el.innerHTML = pwd_str;
+        //   //
+        // });
+        //
+        const hook_pwd_el = document.querySelector(".hook_pwd");
+        const nr_pwds = 15;
+        for (let i = 0; i < nr_pwds; i++) {
+          //
+          const pwd_str = f_gen_pwd_string({ length: 3 });
+          //
+          const new_span_start = document.createElement("div");
+          new_span_start.innerHTML = pwd_str;
+          new_span_start.className = "pwd_box";
+          hook_pwd_el.appendChild(new_span_start);
+          //
+        }
+        //
+      });
+    </script>
+  </body>
+</html>
