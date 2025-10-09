@@ -108,6 +108,12 @@ entropy_bits  = 22.38
 
 So the example GoodPassword's of above have `22 bits` strength.
 
+For comparison, a 4-digit PIN code, has:
+```
+entropy_space = 10^4 
+entropy_bits = 13.29 bits
+```
+
 It is quite difficult to imagine very large numbers, above 1-billion (`10^9`) or the digital equivalent `2^32` (which is roughly 4-billion). <br>
 This video has found a very nice way to explain how big a number 2^256 actually is:
 
